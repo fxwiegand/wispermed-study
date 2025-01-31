@@ -1,0 +1,130 @@
+function custom_func_1ea4e8b2cbb894a7b4e5d063acf2556a(value) { try { 
+    return `<p style="line-height: normal !important;">${value.replace(/([.!?])\s*(?=[A-Z])/g, "$1<br>")}</p>`;
+ } catch (e) { datavzrd.custom_error(e, 'Abstract') }}
+function custom_func_3332adb10deb67f3a302ecc60bdaecde(value) { try { 
+  const trueLabel = '<span style=" display: inline-block; padding: 0.5em 1em; font-size: 0.875em; font-weight: bold; color: white; background-color: rgb(0,128,255); border-radius: 0.25em; text-align: center;">+</span>';
+  const falseLabel = '<span style=" display: inline-block; padding: 0.5em 1em; font-size: 0.875em; font-weight: bold; color: white; background-color: rgb(255,0,0); border-radius: 0.25em; text-align: center;">-</span>';
+  if (value === "Ja") {
+      return trueLabel;
+  } else if (value === "Nein") {
+      return falseLabel;
+  } else {
+      return value;
+  }
+ } catch (e) { datavzrd.custom_error(e, 'Metaanalyse? (Ja/Nein)') }}
+function custom_func_3332adb10deb67f3a302ecc60bdaecde(value) { try { 
+  const trueLabel = '<span style=" display: inline-block; padding: 0.5em 1em; font-size: 0.875em; font-weight: bold; color: white; background-color: rgb(0,128,255); border-radius: 0.25em; text-align: center;">+</span>';
+  const falseLabel = '<span style=" display: inline-block; padding: 0.5em 1em; font-size: 0.875em; font-weight: bold; color: white; background-color: rgb(255,0,0); border-radius: 0.25em; text-align: center;">-</span>';
+  if (value === "Ja") {
+      return trueLabel;
+  } else if (value === "Nein") {
+      return falseLabel;
+  } else {
+      return value;
+  }
+ } catch (e) { datavzrd.custom_error(e, 'Klinische Studie (Ja/Nein)') }}
+function custom_func_09077854ec52e8b45f0957d1fcb3cad7(value) { try { 
+    const match = value.match(/(.+?)\s*\(h-index:\s*(\d+)\)/);
+    if (!match) return value; // Falls das Format nicht passt, gib den ursprünglichen Wert zurück
+
+    const name = match[1];
+    const hIndex = match[2];
+
+    // Farbe je nach h-Index (Grün für hoch, Rot für niedrig)
+    let bgColor;
+    if (hIndex >= 50) {
+        bgColor = "#008000"; // Dunkelgrün für Top-Forscher
+    } else if (hIndex >= 30) {
+        bgColor = "#32a852"; // Grün für etablierte Forscher
+    } else if (hIndex >= 15) {
+        bgColor = "#d4d23a"; // Gelb für mittlere Level
+    } else {
+        bgColor = "#e34b2e"; // Rot für niedrige h-Index-Werte
+    }
+
+    return `
+        <span>${name}</span>
+        <span style="
+            display: inline-block;
+            background-color: ${bgColor};
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            margin-left: 8px;
+        ">${hIndex}</span>
+    `;
+ } catch (e) { datavzrd.custom_error(e, 'Last Author (Name + h-index)') }}
+function custom_func_3332adb10deb67f3a302ecc60bdaecde(value) { try { 
+  const trueLabel = '<span style=" display: inline-block; padding: 0.5em 1em; font-size: 0.875em; font-weight: bold; color: white; background-color: rgb(0,128,255); border-radius: 0.25em; text-align: center;">+</span>';
+  const falseLabel = '<span style=" display: inline-block; padding: 0.5em 1em; font-size: 0.875em; font-weight: bold; color: white; background-color: rgb(255,0,0); border-radius: 0.25em; text-align: center;">-</span>';
+  if (value === "Ja") {
+      return trueLabel;
+  } else if (value === "Nein") {
+      return falseLabel;
+  } else {
+      return value;
+  }
+ } catch (e) { datavzrd.custom_error(e, 'Präregistriert (ClinicalTrials.gov?)') }}
+function custom_func_09077854ec52e8b45f0957d1fcb3cad7(value) { try { 
+    const match = value.match(/(.+?)\s*\(h-index:\s*(\d+)\)/);
+    if (!match) return value; // Falls das Format nicht passt, gib den ursprünglichen Wert zurück
+
+    const name = match[1];
+    const hIndex = match[2];
+
+    // Farbe je nach h-Index (Grün für hoch, Rot für niedrig)
+    let bgColor;
+    if (hIndex >= 50) {
+        bgColor = "#008000"; // Dunkelgrün für Top-Forscher
+    } else if (hIndex >= 30) {
+        bgColor = "#32a852"; // Grün für etablierte Forscher
+    } else if (hIndex >= 15) {
+        bgColor = "#d4d23a"; // Gelb für mittlere Level
+    } else {
+        bgColor = "#e34b2e"; // Rot für niedrige h-Index-Werte
+    }
+
+    return `
+        <span>${name}</span>
+        <span style="
+            display: inline-block;
+            background-color: ${bgColor};
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            margin-left: 8px;
+        ">${hIndex}</span>
+    `;
+ } catch (e) { datavzrd.custom_error(e, 'First Author (Name + h-index)') }}
+function custom_func_3332adb10deb67f3a302ecc60bdaecde(value) { try { 
+  const trueLabel = '<span style=" display: inline-block; padding: 0.5em 1em; font-size: 0.875em; font-weight: bold; color: white; background-color: rgb(0,128,255); border-radius: 0.25em; text-align: center;">+</span>';
+  const falseLabel = '<span style=" display: inline-block; padding: 0.5em 1em; font-size: 0.875em; font-weight: bold; color: white; background-color: rgb(255,0,0); border-radius: 0.25em; text-align: center;">-</span>';
+  if (value === "Ja") {
+      return trueLabel;
+  } else if (value === "Nein") {
+      return falseLabel;
+  } else {
+      return value;
+  }
+ } catch (e) { datavzrd.custom_error(e, 'Open Data? (Ja/Nein)') }}
+function custom_func_b51549e3419d0a7228e594b9f5606af6(value) { try { 
+  const trueLabel = '<span style=" display: inline-block; padding: 0.5em 1em; font-size: 0.875em; font-weight: bold; color: white; background-color: rgb(0,128,255); border-radius: 0.25em; text-align: center;">+</span>';
+  const falseLabel = '<span style=" display: inline-block; padding: 0.5em 1em; font-size: 0.875em; font-weight: bold; color: white; background-color: rgb(255,0,0); border-radius: 0.25em; text-align: center;">-</span>';
+  if (value === "J") {
+      return trueLabel;
+  } else if (value === "N") {
+      return falseLabel;
+  } else {
+      return value;
+  }
+ } catch (e) { datavzrd.custom_error(e, 'Wurde die Studie im Paper mal in einer Guideline erwähnt? (J/N)') }}
+function custom_func_49004fb0ceae291d236987ba0866b418(value, row) { try { 
+    // Generate data for this cell, having access to the value and any other values from the same row.
+    let values = value.split(',').map(Number);
+    return values.map((citations, index) => ({
+        year: 2019 + index, // Assuming years start from 2000
+        citations: citations
+    }));
+ } catch (e) { datavzrd.custom_error(e, 'Citation Trend (Last Years)') }}
