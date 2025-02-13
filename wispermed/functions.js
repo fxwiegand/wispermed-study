@@ -1,3 +1,25 @@
+function custom_func_b0dbe029c96fe1e10225c2afa8ba3435(value) { try { 
+  const trueLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(31, 119, 180); border-radius: 0.4em; text-align: center;">+</span>';
+  const falseLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(214, 39, 40); border-radius: 0.4em; text-align: center;">-</span>';
+  if (value === "Ja") {
+      return trueLabel;
+  } else if (value === "Nein") {
+      return falseLabel;
+  } else {
+      return value;
+  }
+ } catch (e) { datavzrd.custom_error(e, 'Präregistriert (ClinicalTrials.gov?)') }}
+function custom_func_b0dbe029c96fe1e10225c2afa8ba3435(value) { try { 
+  const trueLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(31, 119, 180); border-radius: 0.4em; text-align: center;">+</span>';
+  const falseLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(214, 39, 40); border-radius: 0.4em; text-align: center;">-</span>';
+  if (value === "Ja") {
+      return trueLabel;
+  } else if (value === "Nein") {
+      return falseLabel;
+  } else {
+      return value;
+  }
+ } catch (e) { datavzrd.custom_error(e, 'Klinische Studie (Ja/Nein)') }}
 function custom_func_6c7776a30d2dd6f14eb71298f1f5de1b(value) { try { 
     const match = value.match(/(.+?)\s*\(h-index:\s*(\d+)\)/);
     if (!match) return value; // Falls das Format nicht passt, gib den ursprünglichen Wert zurück
@@ -42,29 +64,10 @@ function custom_func_b0dbe029c96fe1e10225c2afa8ba3435(value) { try {
   } else {
       return value;
   }
- } catch (e) { datavzrd.custom_error(e, 'Metaanalyse? (Ja/Nein)') }}
-function custom_func_b0dbe029c96fe1e10225c2afa8ba3435(value) { try { 
-  const trueLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(31, 119, 180); border-radius: 0.4em; text-align: center;">+</span>';
-  const falseLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(214, 39, 40); border-radius: 0.4em; text-align: center;">-</span>';
-  if (value === "Ja") {
-      return trueLabel;
-  } else if (value === "Nein") {
-      return falseLabel;
-  } else {
-      return value;
-  }
- } catch (e) { datavzrd.custom_error(e, 'Klinische Studie (Ja/Nein)') }}
-function custom_func_b0dbe029c96fe1e10225c2afa8ba3435(value) { try { 
-  const trueLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(31, 119, 180); border-radius: 0.4em; text-align: center;">+</span>';
-  const falseLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(214, 39, 40); border-radius: 0.4em; text-align: center;">-</span>';
-  if (value === "Ja") {
-      return trueLabel;
-  } else if (value === "Nein") {
-      return falseLabel;
-  } else {
-      return value;
-  }
- } catch (e) { datavzrd.custom_error(e, 'Präregistriert (ClinicalTrials.gov?)') }}
+ } catch (e) { datavzrd.custom_error(e, 'Open Data? (Ja/Nein)') }}
+function custom_func_1ea4e8b2cbb894a7b4e5d063acf2556a(value) { try { 
+    return `<p style="line-height: normal !important;">${value.replace(/([.!?])\s*(?=[A-Z])/g, "$1<br>")}</p>`;
+ } catch (e) { datavzrd.custom_error(e, 'Abstract') }}
 function custom_func_1276c91c4e6dede9cdd6a2c63b649824(value) { try { 
   const trueLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(31, 119, 180); border-radius: 0.4em; text-align: center;">+</span>';
   const falseLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(214, 39, 40); border-radius: 0.4em; text-align: center;">-</span>';
@@ -76,9 +79,6 @@ function custom_func_1276c91c4e6dede9cdd6a2c63b649824(value) { try {
       return value;
   }
  } catch (e) { datavzrd.custom_error(e, 'Wurde die Studie im Paper mal in einer Guideline erwähnt? (J/N)') }}
-function custom_func_1ea4e8b2cbb894a7b4e5d063acf2556a(value) { try { 
-    return `<p style="line-height: normal !important;">${value.replace(/([.!?])\s*(?=[A-Z])/g, "$1<br>")}</p>`;
- } catch (e) { datavzrd.custom_error(e, 'Abstract') }}
 function custom_func_b0dbe029c96fe1e10225c2afa8ba3435(value) { try { 
   const trueLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(31, 119, 180); border-radius: 0.4em; text-align: center;">+</span>';
   const falseLabel = '<span style="display: inline-block; margin: 1px; width: 2em; height: 2em; line-height: 2em; font-size: 1em; font-weight: bold; color: white; background-color: rgb(214, 39, 40); border-radius: 0.4em; text-align: center;">-</span>';
@@ -89,7 +89,7 @@ function custom_func_b0dbe029c96fe1e10225c2afa8ba3435(value) { try {
   } else {
       return value;
   }
- } catch (e) { datavzrd.custom_error(e, 'Open Data? (Ja/Nein)') }}
+ } catch (e) { datavzrd.custom_error(e, 'Metaanalyse? (Ja/Nein)') }}
 function custom_func_6c7776a30d2dd6f14eb71298f1f5de1b(value) { try { 
     const match = value.match(/(.+?)\s*\(h-index:\s*(\d+)\)/);
     if (!match) return value; // Falls das Format nicht passt, gib den ursprünglichen Wert zurück
